@@ -1,0 +1,12 @@
+1.1.INSERT INTO book VALUES (NULL, '2', 'C.S.Lewis', 'Narnia', '1950');
+1.2.INSERT INTO book (id_publishing_house, author, name_book, publishing_date) VALUES ('3', 'cor', 'noblesse', '2014');
+1.3.INSERT INTO book_copy (author, name_book) SELECT author, name_book FROM book;
+2.1.DELETE FROM book_copy;
+2.2.DELETE FROM book_copy WHERE author = 'C. S. Lewis';
+2.3.TRUNCATE book_copy;
+3.1.UPDATE book_copy SET id_publishing_house = '1', publishing_date = '1945';
+3.2.UPDATE book_copy SET author = 'Leo Tolstoy' WHERE author = 'cor';
+3.3.UPDATE book_copy SET publishing_date = '1950', id_publishing_house = '3' WHERE author = 'C. S. Lewis';
+4.1.SELECT author, name_book FROM book;
+4.2.SELECT * FROM book;
+4.3.SELECT * FROM book WHERE author = "C. S. Lewis";
